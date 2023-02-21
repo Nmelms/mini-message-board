@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= messages.text %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <% messages.forEach((message)=> { %>
+    <p><%= message.text %></p>
+    <% }) %>
+  </body>
+</html>
