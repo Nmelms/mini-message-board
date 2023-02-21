@@ -13,9 +13,17 @@ let messages = [
   },
 ];
 
+const onClick = () => {
+  document.location.href = "/new";
+};
+
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "mini message board", messages: messages });
+  res.render("index", {
+    title: "mini message board",
+    messages: messages,
+    onClick: onClick,
+  });
 });
 router.get("/new", function (req, res, next) {
   res.render("form", { title: "form", messages: messages });
